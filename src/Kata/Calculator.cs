@@ -11,11 +11,12 @@ namespace Kata
             
             if (num.Contains(','))
             {
-                var arrayOfStringNumbers = num.Split(",");
+                var arrayOfStringNumbers = num.Split(new [] {",","\n"}, StringSplitOptions.None);
                 
                 var arrayOfNumbers = arrayOfStringNumbers.Select(x => Convert.ToInt32(x));
                 return arrayOfNumbers.Sum();
             }
+            
             return 3;
         }
     }
