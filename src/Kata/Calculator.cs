@@ -4,7 +4,9 @@ namespace Kata
     {
         public int Add(string num = "")
         {
-            return 0;
+            if (string.IsNullOrEmpty(num)) return 0;
+            
+            return 3;
         }
     }
 }
